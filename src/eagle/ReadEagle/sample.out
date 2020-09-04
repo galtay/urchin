@@ -1,0 +1,350 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+python: Rank 0:13: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:31: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:9: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:22: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:19: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:15: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:14: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:16: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:23: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:18: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:21: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:10: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:4: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:8: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:7: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:6: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:11: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:5: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:33: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:32: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:28: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:29: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:30: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:35: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:25: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:27: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:20: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:12: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:17: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:26: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:34: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+python: Rank 0:24: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+There are  256  snapshot files
+Process  0  is doing file  0
+Process  10  is doing file  1Process  7  is doing file  7
+1
+Process  5  is doing file  5
+Process  3  is doing file  3
+Process  8  is doing file  8
+Process  9  is doing file  9
+Process  6  is doing file  6
+Process  1  is doing file  1
+Process  32  is doing file  32
+Process  29  is doing file  29
+Process  24  is doing file  24
+Process  31  is doing file  31
+Process  27  is doing file  27
+Process  28  is doing file  28
+Process  33  is doing file  33
+Process  30  is doing file  30
+Process  34  is doing file  34
+Process  35  is doing file  35
+Process  26  is doing file  26
+Process  25  is doing file  25
+Process  14  is doing file  14
+Process  16  is doing file  16
+Process  13  is doing file  13
+Process  18  is doing file  18
+Process  15  is doing file  15
+Process  20  is doing file  20
+Process  23  is doing file  23
+Process  12  is doing file  12
+Process  19  is doing file  19
+Process  22  is doing file  22
+Process  17  is doing file  17
+Process  21  is doing file  21
+Process  14  is doing file  50
+Process  17  is doing file  53
+Process  16  is doing file  52
+Process  20  is doing file  56
+Process  19  is doing file  55
+Process  15  is doing file  51
+Process  23  is doing file  59
+Process  12  is doing file  48
+Process  21  is doing file  57
+Process  18  is doing file  54
+Process  29  is doing file  65
+Process  22  is doing file  58
+Process  13  is doing file  49
+Process  28  is doing file  64
+Process  31  is doing file  67
+Process  30  is doing file  66
+Process  25  is doing file  61
+Process  33  is doing file  69
+Process  34  is doing file  70
+Process  27  is doing file  63
+Process  26  is doing file  62
+Process  32  is doing file  68
+Process  24  is doing file  60
+Process  6  is doing file  42
+Process  9  is doing file  45
+Process  0  is doing file  36
+Process  1  is doing file  37
+Process  2  is doing file  38
+Process  35  is doing file  71
+Process  8  is doing file  44
+Process  11  is doing file  47
+Process  10  is doing file  46
+Process  4  is doing file  40
+Process  3  is doing file  39
+Process  5  is doing file  41
+Process  14  is doing file  86
+Process  17  is doing file  89
+Process  21  is doing file  93
+Process  16  is doing file  88
+Process  20  is doing file  92
+Process  12  is doing file  84
+Process  19  is doing file  91
+Process  23  is doing file  95
+Process  13  is doing file  85
+Process  18  is doing file  90
+Process  15  is doing file  87
+Process  22  is doing file  94
+Process  31  is doing file  103
+Process  0  is doing file  72
+Process  29  is doing file  101
+Process  26  is doing file  98
+Process  33  is doing file  105
+Process  27  is doing file  99
+Process  28  is doing file  100
+Process  9  is doing file  81
+Process  30  is doing file  102
+Process  4  is doing file  76
+Process  25  is doing file  97
+Process  3  is doing file  75
+Process  32  is doing file  104
+Process  5  is doing file  77
+Process  8  is doing file  80
+Process  24  is doing file  96
+Process  1  is doing file  73
+Process  34  is doing file  106
+Process  35  is doing file  107
+Process  11  is doing file  83
+Process  2  is doing file  74
+Process  14  is doing file  122
+Process  17  is doing file  125
+Process  18  is doing file  126
+Process  23  is doing file  131
+Process  13  is doing file  121
+Process  20  is doing file  128
+Process  19  is doing file  127
+Process  12  is doing file  120
+Process  16  is doing file  124
+Process  15  is doing file  123
+Process  21  is doing file  129
+Process  22  is doing file  130
+Process  31  is doing file  139
+Process  27  is doing file  135
+Process  33  is doing file  141
+Process  29  is doing file  137
+Process  34  is doing file  142
+Process  28  is doing file  136
+Process  30  is doing file  138
+Process  24  is doing file  132
+Process  25  is doing file  133
+Process  35  is doing file  143
+Process  26  is doing file  134
+Process  32  is doing file  140
+Process  14  is doing file  158
+Process  18  is doing file  162
+Process  20  is doing file  164
+Process  12  is doing file  156
+Process  13  is doing file  157
+Process  17  is doing file  161
+Process  10  is doing file  118
+Process  1  is doing file  109
+Process  8  is doing file  116
+Process  5  is doing file  113
+Process  4  is doing file  112
+Process  0  is doing file  108
+Process  7  is doing file  115
+Process  6  is doing file  114
+Process  3  is doing file  111
+Process  2  is doing file  110
+Process  16  is doing file  160
+Process  15  is doing file  159
+Process  23  is doing file  167
+Process  22  is doing file  166
+Process  11  is doing file  119
+Process  21  is doing file  165
+Process  19  is doing file  163
+Process  31  is doing file  175
+Process  27  is doing file  171
+Process  26  is doing file  170
+Process  28  is doing file  172
+Process  34  is doing file  178
+Process  33  is doing file  177
+Process  24  is doing file  168
+Process  29  is doing file  173
+Process  35  is doing file  179
+Process  25  is doing file  169
+Process  30  is doing file  174
+Process  32  is doing file  176
+Process  13  is doing file  193
+Process  20  is doing file  200
+Process  14  is doing file  194
+Process  17  is doing file  197
+Process  18  is doing file  198
+Process  12  is doing file  192
+Process  16  is doing file  196
+Process  22  is doing file  202
+Process  15  is doing file  195
+Process  21  is doing file  201
+Process  23  is doing file  203
+Process  19  is doing file  199
+Process  10  is doing file  154
+Process  4  is doing file  148
+Process  5  is doing file  149
+Process  1  is doing file  145
+Process  3  is doing file  147
+Process  2  is doing file  146
+Process  9  is doing file  153
+Process  0  is doing file  144
+Process  8  is doing file  152
+Process  6  is doing file  150
+Process  7  is doing file  151
+Process  31  is doing file  211
+Process  11  is doing file  155
+Process  34  is doing file  214
+Process  27  is doing file  207
+Process  28  is doing file  208
+Process  24  is doing file  204
+Process  29  is doing file  209
+Process  33  is doing file  213
+Process  35  is doing file  215
+Process  26  is doing file  206
+Process  30  is doing file  210
+Process  25  is doing file  205
+Process  32  is doing file  212
+Process  20  is doing file  236
+Process  18  is doing file  234
+Process  17  is doing file  233
+Process  13  is doing file  229
+Process  14  is doing file  230
+Process  12  is doing file  228
+Process  16  is doing file  232
+Process  15  is doing file  231
+Process  22  is doing file  238
+Process  21  is doing file  237
+Process  23  is doing file  239
+Process  34  is doing file  250
+Process  31  is doing file  247
+Process  35  is doing file  251
+Process  28  is doing file  244
+Process  24  is doing file  240
+Process  1  is doing file  181
+Process  5  is doing file  185
+Process  26  is doing file  242
+Process  7  is doing file  187
+Process  0  is doing file  180
+Process  29  is doing file  245
+Process  33  is doing file  249
+Process  10  is doing file  190
+Process  27  is doing file  243
+Process  9  is doing file  189
+Process  4  is doing file  184
+Process  30  is doing file  246
+Process  25  is doing file  241
+Process  6  is doing file  186
+Process  19  is doing file  235
+Process  3  is doing file  183
+Process  32  is doing file  248
+Process  2  is doing file  182
+Process  8  is doing file  188
+Process  11  is doing file  191
+Process  5  is doing file  221
+Process  0  is doing file  216
+Process  10  is doing file  226
+Process  1  is doing file  217
+Process  9  is doing file  225
+Process  7  is doing file  223
+Process  6  is doing file  222
+Process  4  is doing file  220
+Process  3  is doing file  219
+Process  2  is doing file  218
+Process  8  is doing file  224
+Process  11  is doing file  227
+Process  0  is doing file  252
+Process  1  is doing file  253
+Process  3  is doing file  255
+Process  2  is doing file  254
+Updating file headers
+Done.
+
+------------------------------------------------------------
+Sender: LSF System <hpcadmin@m4048>
+Subject: Job 23253: <sample_snapshot> in cluster console52_cluster1 Done
+
+Job <sample_snapshot> was submitted from host <castor> by user <tt> in cluster <console52_cluster1>.
+Job was executed on host(s) <12*m4048>, in queue <cosma>, as user <tt> in cluster <console52_cluster1>.
+                            <12*m4214>
+                            <12*m4215>
+</cosma/home/tt> was used as the home directory.
+</gpfs/data/Eagle/python/ReadEagle> was used as the working directory.
+Started at Fri Oct 26 10:57:57 2012
+Results reported at Fri Oct 26 11:02:46 2012
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/tcsh
+#
+# Make a random sample of an Eagle snapshot
+#
+#BSUB -L /bin/tcsh
+#BSUB -n 36
+#BSUB -J sample_snapshot
+#BSUB -oo sample.out
+#BSUB -q cosma
+#
+
+module purge
+module load python
+module load platform_mpi/gnu_4.4.6/8.2.0
+
+setenv INFILE  /gpfs/data/Eagle/mfTestRuns/EAGLE_RUNS/L0100N1440/ANARCHY_CSP_048/COOL_OWLS_LIM_1/AGN_HALO_11p60_SNe_T0_5p5_x2Fe_x2SNIA/data/snipshot_065_z009p266/snip_065_z009p266.11.hdf5
+setenv OUTBASE /gpfs/data/Eagle/ttTestRuns/EAGLE_RUNS/L0100N1440/ANARCHY_CSP_048/COOL_OWLS_LIM_1/AGN_HALO_11p60_SNe_T0_5p5_x2Fe_x2SNIA/data/dsnip_002 
+setenv sample 0.001
+
+# Run the program
+mpirun python ./sample_volume.py $INFILE $OUTBASE $sample
+
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   3582.65 sec.
+    Max Memory :      8514 MB
+    Max Swap   :     25044 MB
+
+    Max Processes  :        47
+    Max Threads    :        85
+
+The output (if any) is above this job summary.
+

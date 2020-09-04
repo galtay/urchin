@@ -1,0 +1,320 @@
+#!/bin/sh
+##############################################################################
+##############################################################################
+#                                                                            #
+#                Urchin Makefile - Deployed by Gabriel Altay                 #
+#                                                                            #
+##############################################################################
+##############################################################################
+
+
+
+# Runtime Macros 
+#=============================================================================
+#
+# These control the particle data structure and the code operation. 
+# The default is for all these flags to be commented out.  Urchin 
+# requires the HDF5 library and the HDF5 fortran wrapper provided,
+# with the Urchin download.
+#
+
+#MACRO += -DincHmf      # for individual Hydrogen mass fractions *
+
+#MACRO += -DincH2       # for non-zero molecular Hydrogen mass fractions *
+
+#MACRO += -DoutGammaHI  # output to include HI photoionization rates *
+
+#MACRO += -DincCloudy   # store and output cloudy ionization table values *
+
+#MACRO += -DTinit       # store and output the initial temperature *
+
+#MACRO += -DincEOS      # treat particles on EOS differently * 
+
+#MACRO += -DincVel      # read in particle velocities
+
+#MACRO += -DoldRT       # use old RT method
+
+#MACRO += -DcheckRT     # runs time consuming checks on the RT
+
+#MACRO += -DnoRTtable   # doesn't use RT look up table
+
+#MACRO += -DincHe       # to account for Helium ionizations / shielding *
+
+#MACRO += -DincHemf     # for individual Helium mass fractions *
+
+
+
+#SIMTYPE=CosmoBH     # selects input as CosmoBH snapshot
+#SIMTYPE=OWLS        # selects input as an OWLS snapshot
+SIMTYPE=EAGLE      # selects input as EAGLE snapshot
+#SIMTYPE=GIMIC       # selects input as a GIMIC snapshot
+
+
+# Runtime Macros - these are sets of macros for specific simulations
+#=============================================================================
+
+ifeq (CosmoBH,$(findstring CosmoBH, $(SIMTYPE)))	
+   MACRO += -DincH2
+   MACRO += -DoutGammaHI
+   MACRO += -DincCloudy
+   MACRO += -DincEOS
+endif
+
+
+ifeq (OWLS,$(findstring OWLS, $(SIMTYPE)))	
+   MACRO += -DincHmf
+   MACRO += -DincH2
+   MACRO += -DoutGammaHI
+   MACRO += -DincCloudy
+   MACRO += -DTinit
+   MACRO += -DincEOS
+endif
+
+
+ifeq (EAGLE,$(findstring EAGLE, $(SIMTYPE)))	
+   MACRO += -DincHmf
+   MACRO += -DincH2
+   MACRO += -DoutGammaHI
+   MACRO += -DincCloudy
+   MACRO += -DTinit
+   MACRO += -DincEOS
+   MACRO += -DEAGLE
+   MACRO += -DLONGIDs
+endif
+
+
+ifeq (GIMIC,$(findstring GIMIC, $(SIMTYPE)))	
+   MACRO += -DincHmf
+   MACRO += -DincH2
+   MACRO += -DoutGammaHI
+   MACRO += -DincCloudy
+   MACRO += -DincEOS
+endif
+
+
+
+
+
+# System include files
+#=============================================================================
+#
+# In order for the Makefile to work, you have to design an include file
+# for your system that sets certain variables.  The variables that need to 
+# be set are,
+#
+# FC:      command to invoke the Fortran 90 compiler
+# FFLAGS_DEBUG:      compiler flags for debug mdoe (dont forget openmp) 
+# FFLAGS_OPTIMIZED:  compiler flags for optimized (dont forget openmp)
+#
+# ISLIB:   flag to add a library search path (e.g. -L)
+# ISINC:   flag to add an include path (e.g. -I)
+# ISMOD:   flag to add a module search path (e.g. -I or -M)
+# ISRLIB:  flag to add a runtime library search path (e.g. -R or -Wl,-rpath=)
+#
+# HDF_MOD:  dir containing hdf5.mod (e.g. /usr/include) 
+# HDF_LIB:  dir containing libhdf5.(so|a) (e.g. /usr/lib)
+# HDFW_MOD: dir containing hdf5_wrapper.mod (e.g. ../hdf5_wrapper/..../lib) 
+# HDFW_LIB: dir containing libhdfwrapper.(so|a) (e.g. ../hdf5_wrapper/..../lib)
+#
+#  Please look in the makes directory for examples. 
+#
+
+#include makes/make.small-fry.gcc
+include makes/make.cosma5.intel
+#include makes/make.charm.gcc
+include makes/make.gfortran
+
+
+# Choose if we do debug or optimized compile 
+#=============================================================================
+FFLAGS = ${FFLAGS_DEBUG} 
+#FFLAGS = ${FFLAGS_OPTIMIZED} 
+
+
+# These lines control the HDF5 options. If you are on COSMA then you 
+# can just use the nice predefined environment variables to the HDF5 libs.  
+#=============================================================================
+
+OPT += $(MACRO)
+
+OPTHDFW += $(ISMOD)$(HDFW_MOD)
+OPTHDFW += $(ISLIB)$(HDFW_LIB)
+OPTHDFW += $(ISINC)$(HDFW_MOD)
+OPTHDFW += $(ISRLIB)$(HDFW_LIB)
+
+OPT += $(OPTHDFW) -lhdfwrapper
+
+OPTHDF += $(ISMOD)$(HDF_MOD)
+OPTHDF += $(ISLIB)$(HDF_LIB)
+OPTHDF += $(ISINC)$(HDF_MOD)
+OPTHDF += $(ISRLIB)$(HDF_LIB)
+
+OPT += $(OPTHDF) -lhdf5
+
+
+# OPT= $(MACRO) $(F90_MODULE_FLAGS) $(LDFLAGS) -lhdf5 -lhdfwrapper
+
+
+ifeq (EAGLE,$(findstring EAGLE, $(SIMTYPE)))	
+  OPT += ${ISMOD}eagle
+endif
+
+
+
+
+
+
+#=============================================================================
+#=============================================================================
+
+# Applications to make.  screen just reports the Makefile options
+#-------------------------------------------------------------------
+APPS= screen urchin make_slab_lookup_table
+
+# A list of the object files to be produced
+#-------------------------------------------------------------------
+OBJS=
+
+ifeq (EAGLE,$(findstring EAGLE, $(SIMTYPE)))	
+  OBJS += eagle/read_eagle.o \
+		    eagle/read_eagle_f.o \
+		    eagle/read_eagle_fortran.o 
+endif
+
+
+OBJS += time.o \
+	myf90.o \
+	config.o \
+	physical_constants.o \
+	input_output/gadget_general_class.o \
+	input_output/gadget_public_header_class.o \
+	input_output/gadget_public_header_hdf5_class.o \
+	input_output/gadget_owls_header_class.o \
+	input_output/gadget_sphray_header_class.o \
+	healpix_types.o \
+	pix_tools.o \
+	mt19937.o \
+	m_mrgrnk.o \
+	atomic_rates/hui_gnedin_atomic_rates.o \
+	atomic_rates/cen_atomic_rates.o \
+	atomic_rates/hummer_atomic_rates.o \
+	atomic_rates/atomic_rates.o \
+	ion_table_class.o \
+	analytic_ionization_solutions.o \
+	cosmology.o \
+	particle_system.o \
+	w4_gadget_spline_kernel_class.o \
+	octtree3.o \
+	ray.o \
+	raylist.o \
+	global.o \
+	particle_returns.o \
+	slab_lookup_table_class.o \
+	ionpar.o \
+	input_output/gadget_public_input.o \
+	input_output/gadget_cosmoBH_input.o \
+	input_output/gadget_owls_input.o \
+	input_output/gadget_vbromm_input.o \
+	input_output/gadget_public_input_hdf5.o \
+	input_output/gadget_eagle_input.o \
+	input_output/main_input.o \
+	input_output/output_gadget_public.o \
+	input_output/output_gadget_hdf5.o \
+	input_output/output.o \
+	initialize.o \
+	main_loop.o 
+
+
+
+
+
+
+
+
+
+# Targets
+#=============================================================================
+#
+# Implicit Rules
+#----------------
+#
+# $@ = name of target 
+# $< = name of first dependency
+# $^ = name of all dependencies with duplicates removed
+# $? = name of all dependencies newer than the target
+# $+ = name of all dependencies w/o duplicates removed
+#
+
+
+
+all:$(APPS)
+
+
+# Just Dummy Reporting
+#=============================================================================
+screen: Makefile
+	@echo
+	@echo "SIMTYPE=  " $(SIMTYPE)
+	@echo "MACRO=    " $(MACRO)
+	@echo "FFLAGS=    " $(FFLAGS)
+	@echo "OPT=    " $(OPT)
+	@echo
+
+#
+# Main Urchin applications
+#=============================================================================
+urchin: $(OBJS) urchin.o
+	$(FC) $(FFLAGS) $^ $(OPT)  -o $@
+
+make_slab_lookup_table: $(OBJS) make_slab_lookup_table.o
+	$(FC) $(FFLAGS) $^ $(OPT)  -o $@
+
+make_one_slab: $(OBJS) make_one_slab.o
+	$(FC) $(FFLAGS) $^ $(OPT)  -o $@
+
+
+
+# Implicit Rules
+#=============================================================================
+
+CFLAGS = -g -DH5_USE_16_API
+
+%.o: %.F90 
+	$(FC) $(FFLAGS) $(OPT) -c $< -o $@
+
+%.o: %.f90 
+	$(FC) $(FFLAGS) $(OPT) -c $< -o $@
+
+.c.o:
+	$(CC) $(CFLAGS) $(OPT) $(CPPFLAGS) -c $< -o $*.o
+
+
+
+# Standard Cleaning Targets
+#=============================================================================
+
+clean :
+	rm -f *.o *.mod atomic_rates/*.o   input_output/*.o   eagle/*.o \
+                   atomic_rates/*.mod input_output/*.mod eagle/*.mod
+
+cleanall :
+	rm -f *.o *.mod atomic_rates/*.o   input_output/*.o    eagle/*.o \
+                   atomic_rates/*.mod input_output/*.mod  eagle/*.mod \
+	$(APPS) 
+
+tidy :
+	rm -f *~ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+To compile and install the HDF5 wrapper for use with Urchin make 
+a copy of the template directory related to the HDF5 version and 
+fortran compiler you are using and then follow the instructions in 
+the README file in that directory.
+
+
+1) Make a copy of the template directory 
+> cp -r template hdf5-1.8.8-gfortran-4.7
+
+2) Look in README file
+> emacs hdf5-1.8.8-gfortran-4.7/README &

@@ -1,0 +1,19 @@
+FC= gfortran
+
+FFLAGS_DEBUG     = -g -Wall -fopenmp
+FFLAGS_OPTIMIZED = -Ofast -fopenmp
+
+ISLIB= -L
+ISINC= -I
+ISMOD= -I
+ISRLIB= -Wl,-rpath=
+
+HDF_MOD=
+HDF_LIB=
+HDFW_MOD= ../hdf5_wrapper/hdf5-1.8.11-gfortran-4.8.2/lib
+HDFW_LIB= ../hdf5_wrapper/hdf5-1.8.11-gfortran-4.8.2/lib
+
+
+
+
+
